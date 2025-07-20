@@ -4,7 +4,7 @@ const fs = require('fs');
 const UP = "(";
 const DOWN = ")";
 
-function get_floor(input) {
+function getFloor(input) {
   let result = 0;
   for (let i = 0; i < input.length; i++) {
     const c = input[i];
@@ -14,7 +14,7 @@ function get_floor(input) {
   return result;
 }
 
-function get_basement_floor_id(input) {
+function getBasementFloorId(input) {
   let result = 0;
   for (let i = 0; i < input.length; i++) {
     const c = input[i];
@@ -29,7 +29,7 @@ function main() {
   const filename = process.argv[2];
   try {
     const data = fs.readFileSync(filename, "utf-8");
-    const floor = get_floor(data);
+    const floor = getFloor(data);
     const basement = get_basement_floor_id(data);
 
     console.log(`floor: ${floor}`);
