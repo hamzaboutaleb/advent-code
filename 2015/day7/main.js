@@ -331,7 +331,6 @@ function sortGraph(stmts) {
       }
     }
   }
-  console.log(sortedList.slice(0,5))
   return sortedList;
 }
 
